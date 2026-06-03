@@ -1,0 +1,16 @@
+{
+  "name": "vid2gif",
+  "version": "1.0.0",
+  "description": "Convert video to optimized GIFs",
+  "type": "module",
+  "bin": {
+    "vid2gif": "./bin/vid2gif.js"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.9.0",
+    "cli-progress": "^3.12.0",
+    "commander": "^12.0.0",
+    "execa": "^9.0.0",
+    "tmp": "^0.2.1"
+  }
+}
