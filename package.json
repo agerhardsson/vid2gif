@@ -1,16 +1,18 @@
 {
   "name": "vid2gif",
   "version": "1.0.0",
-  "description": "Convert video to optimized GIFs",
+  "description": "Convert video or SVG to optimized GIFs",
   "type": "module",
   "bin": {
     "vid2gif": "./bin/vid2gif.js"
   },
   "dependencies": {
     "@clack/prompts": "^0.9.0",
+    "@resvg/resvg-js": "^2.6.2",
     "cli-progress": "^3.12.0",
     "commander": "^12.0.0",
     "execa": "^9.0.0",
+    "puppeteer": "^24.43.1",
     "tmp": "^0.2.1"
   }
 }
