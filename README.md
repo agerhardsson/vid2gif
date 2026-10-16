@@ -1,18 +1,20 @@
 # vid2gif
 
-Convert video, static SVG, and animated SVG inputs to optimized GIFs. Interactive and CLI modes.
+Convert video, static SVG, animated SVG, and folders of PNG frames to optimized GIFs. Interactive and CLI modes.
 
 ## Install
 
 ### From this repo
 
 ```sh
+npm install
 npm install -g .
 ```
 
 Or during development:
 
 ```sh
+npm install
 npm link
 ```
 
@@ -38,13 +40,14 @@ npx vid2gif
 vid2gif
 ```
 
-Guides you through file selection, resolution, motion level, colors, and file size limits. For video inputs it also supports cropping, frame optimization, and clipping.
+Guides you through input path selection, resolution, motion level, colors, and file size limits. The input can be a video, SVG, or a folder of PNG frames. For video inputs it also supports cropping, frame optimization, and clipping.
 
 ### Non-interactive mode
 
 ```sh
 vid2gif input.mp4 output.gif
 vid2gif artwork.svg artwork.gif
+vid2gif frames/ animation.gif
 ```
 
 ### Options
@@ -70,7 +73,10 @@ vid2gif video.mp4 out.gif --start 5 --duration 3 --max-size 5
 vid2gif video.mp4 out.gif --no-crop --no-frame-opt
 vid2gif artwork.svg out.gif --res 1 --colors 128
 vid2gif git_flow.drawio.svg git_flow.gif --motion low
+vid2gif frames/ animation.gif --fps 12
 ```
+
+PNG frames are read directly from the folder in natural filename order (for example, `frame2.png` comes before `frame10.png`).
 
 ## Pipeline
 

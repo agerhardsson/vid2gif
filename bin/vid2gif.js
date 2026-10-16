@@ -10,8 +10,8 @@ const program = new Command();
 
 program
   .name("vid2gif")
-  .description("Convert video or SVG to optimized GIF")
-  .argument("[input]", "input video or SVG")
+  .description("Convert video, SVG, or a folder of PNG frames to an optimized GIF")
+  .argument("[input]", "input video, SVG, or folder of PNG frames")
   .argument("[output]", "output gif")
   .option("--res <0.0-2.0>", "resolution as % of original", "0.75")
   .option("--motion <level>", "motion level: low|medium|high", "medium")
